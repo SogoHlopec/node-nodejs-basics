@@ -1,6 +1,5 @@
 import * as process from 'node:process';
 
-
 const parseEnv = () => {
     try {
         const keys = Object.keys(process.env);
