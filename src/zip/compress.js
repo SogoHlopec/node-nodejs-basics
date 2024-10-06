@@ -9,11 +9,11 @@ const __dirname = path.dirname(__filename);
 
 const compress = async () => {
     try {
-        const gzip = await zlib.createGzip();
-        const file = await fs.createReadStream(
+        const gzip = zlib.createGzip();
+        const file = fs.createReadStream(
             path.join(__dirname, '/files/fileToCompress.txt')
         );
-        const compressedFile = await fs.createWriteStream(
+        const compressedFile = fs.createWriteStream(
             path.join(__dirname, '/files/archive.gz')
         );
 
