@@ -21,8 +21,8 @@ const rename = async () => {
             }
 
             await fsPromises.rename(
-                path.join(__dirname, 'files/properFilename.md'),
-                path.join(__dirname, 'files/wrongFilename.txt')
+                path.join(__dirname, 'files/wrongFilename.txt'),
+                path.join(__dirname, 'files/properFilename.md')
             );
         }
     } catch (error) {
