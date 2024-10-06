@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const copy = async () => {
     try {
         await fsPromises.mkdir(path.join(__dirname, 'files_copy'));
-        const files = await fsPromises.readdir(path.join(__dirname, 'filess'));
+        const files = await fsPromises.readdir(path.join(__dirname, 'files'));
         for (const file of files) {
             const existingFile = path.join(__dirname, 'files', file);
             const fileCopy = path.join(__dirname, 'files_copy', file);
